@@ -1,0 +1,60 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "Ycode Link",
+	"Description": "Connects Unreal Editor to the Ycode IDE: editor log streaming, Play-In-Editor control, Blueprint navigation, Live Coding / Hot Reload, shader source mappings, Python and scene tools for AI agents, Blueprint frames for the native debugger, and Open-in-Ycode source access. Everything is served over a loopback MCP (Model Context Protocol) endpoint.",
+	"Category": "Programming",
+	"CreatedBy": "Pix Philosophy (HK) Limited.",
+	"CreatedByURL": "https://mixstudio.tech",
+	"DocsURL": "https://github.com/mixstudiotech/YcodeUnrealLink#readme",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/mixstudiotech/YcodeUnrealLink/issues",
+	"EnabledByDefault": true,
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "YcodeLink",
+			"Type": "EditorNoCommandlet",
+			"LoadingPhase": "PreDefault"
+		},
+		{
+			"Name": "YcodeEditor",
+			"Type": "EditorNoCommandlet",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "YcodeAgentTools",
+			"Type": "EditorNoCommandlet",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "YcodeSourceCodeAccess",
+			"Type": "EditorNoCommandlet",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ "Win64" ]
+		},
+		{
+			"Name": "YcodeDebuggerSupport",
+			"Type": "EditorNoCommandlet",
+			"LoadingPhase": "PreDefault",
+			"PlatformAllowList": [ "Win64" ]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		},
+		{
+			"Name": "Niagara",
+			"Enabled": true
+		}
+	]
+}
